@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--HomeNav-->
+        <scene sceneID="JOv-xA-Gk9">
+            <objects>
+                <navigationController id="Ous-MB-u8K" userLabel="HomeNav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="gWC-oc-ajV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZmF-QQ-TLq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="fOd-EK-DrV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMe-Wo-8UN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="-327"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController title="Home" id="9pv-A4-QxB" userLabel="Home" customClass="ViewController" customModule="InterAppComm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fYX-da-bFf">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Input Text" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qc1-my-WNx">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="KZj-QA-i5X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ri-dg-KUO">
+                                        <rect key="frame" x="0.0" y="200" width="600" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.3323974609375" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="qS3-jt-QQF"/>
+                                        </constraints>
+                                        <state key="normal" title="To Morse Code"/>
+                                        <connections>
+                                            <action selector="convertToMorseCode:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Dla-ox-MqK"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htn-9i-Rpw">
+                                        <rect key="frame" x="0.0" y="250" width="600" height="187"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XIR-nR-SsY" userLabel="actions">
+                                        <rect key="frame" x="0.0" y="437" width="600" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBZ-bD-wc9">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.3323974609" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="rGi-Ir-eBA"/>
+                                                </constraints>
+                                                <state key="normal" title="Play"/>
+                                                <connections>
+                                                    <action selector="playMorseCode:" destination="9pv-A4-QxB" eventType="touchUpInside" id="joq-5U-cqF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6w-xL-sMj">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.25490196078431371" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="SqQ-Ns-g65"/>
+                                                </constraints>
+                                                <state key="normal" title="&gt;&gt;&gt; Send &gt;&gt;&gt;">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendMorseCode:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hZt-1d-x0n"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="n6w-xL-sMj" firstAttribute="width" secondItem="QBZ-bD-wc9" secondAttribute="width" id="SEs-8y-h7e"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fYX-da-bFf" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="BcZ-wO-PoG"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="fYX-da-bFf" secondAttribute="bottom" id="OJe-vo-00o"/>
+                            <constraint firstAttribute="trailing" secondItem="fYX-da-bFf" secondAttribute="trailing" id="sQN-Mu-DFU"/>
+                            <constraint firstItem="fYX-da-bFf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="z94-aW-h80"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" title="Morse Code Converter" id="ky3-UJ-hCv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="KX5-vi-BXF">
+                            <connections>
+                                <action selector="showActions:" destination="9pv-A4-QxB" id="LeO-72-T8F"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="inputTextField" destination="qc1-my-WNx" id="neO-1o-9ip"/>
+                        <outlet property="outputTextView" destination="htn-9i-Rpw" id="C2E-3a-ERn"/>
+                        <outlet property="playButton" destination="QBZ-bD-wc9" id="Xww-Vi-QbI"/>
+                        <outlet property="sendButton" destination="n6w-xL-sMj" id="k6M-1L-ypE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621" y="-327"/>
+        </scene>
+        <!--AppList-->
+        <scene sceneID="dPR-58-O7Q">
+            <objects>
+                <tableViewController title="App Launcher" id="dex-Tx-lI1" userLabel="AppList" customClass="LauncherTableViewController" customModule="InterAppComm" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xpj-gR-fB8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="Ex5-wI-2GG" style="IBUITableViewCellStyleDefault" id="dST-n7-J5Z">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dST-n7-J5Z" id="x6x-Pz-VAQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="left" text="AppName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ex5-wI-2GG">
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="dex-Tx-lI1" id="Yyp-fg-gXs"/>
+                            <outlet property="delegate" destination="dex-Tx-lI1" id="7Mx-Jy-jt6"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="OcQ-YG-Jj1"/>
+                    <navigationItem key="navigationItem" title="App Launcher" id="y6K-LE-2ga"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RsQ-be-FJs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1621" y="421"/>
+        </scene>
+        <!--Inter-App Comm-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Inter-App Comm" id="ECm-hu-q1W"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ous-MB-u8K" kind="relationship" relationship="viewControllers" id="h5x-1N-qo2"/>
+                        <segue destination="1L5-Y0-Irn" kind="relationship" relationship="viewControllers" id="M0U-3U-R1e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--AppLauncherNav-->
+        <scene sceneID="L0x-KZ-496">
+            <objects>
+                <navigationController id="1L5-Y0-Irn" userLabel="AppLauncherNav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lkU-5m-x6M"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NzQ-3B-JBk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dex-Tx-lI1" kind="relationship" relationship="rootViewController" id="10f-xA-Owy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uM-7f-NB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850" y="421"/>
+        </scene>
+    </scenes>
+</document>
